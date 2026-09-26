@@ -136,7 +136,6 @@
             position: relative;
         }
 
-        /* Górny panel przycisków w prawym rogu */
         .top-controls {
             position: fixed;
             top: 20px;
@@ -165,7 +164,6 @@
             transform: scale(1.05);
         }
 
-        /* Menu rozwijane (wspólne dla motywów i języków) */
         .dropdown-menu {
             position: absolute;
             top: 55px;
@@ -204,7 +202,6 @@
             border-color: var(--btn-border);
         }
 
-        /* Główny kontener */
         .main-container {
             background: linear-gradient(135deg, var(--container-bg-1), var(--container-bg-2));
             backdrop-filter: blur(8px);
@@ -220,7 +217,6 @@
             text-align: center;
         }
 
-        /* Tytuł */
         .main-title {
             font-size: 2.8rem;
             font-weight: 900;
@@ -230,14 +226,12 @@
             letter-spacing: 1px;
         }
 
-        /* Podtytuł */
         .subtitle {
             color: var(--subtitle-color);
             font-size: 1.1rem;
             margin-bottom: 30px;
         }
 
-        /* Nagłówek sekcji */
         .section-title {
             font-size: 1.8rem;
             font-weight: 800;
@@ -248,7 +242,6 @@
             text-shadow: 0 0 12px var(--section-shadow);
         }
 
-        /* Kontener na grę */
         .game-wrapper {
             background: rgba(0, 0, 0, 0.5);
             border-radius: 12px;
@@ -266,7 +259,6 @@
             border-radius: 8px;
         }
 
-        /* Stopka / napis na dole */
         .footer-note {
             color: var(--subtitle-color);
             font-size: 0.95rem;
@@ -274,7 +266,6 @@
             opacity: 0.8;
         }
 
-        /* Styl dla widoku kontaktu */
         .contact-info-text {
             color: var(--subtitle-color);
             font-size: 1.05rem;
@@ -313,7 +304,6 @@
             box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
         }
 
-        /* Klasa do ukrywania sekcji */
         .hidden {
             display: none !important;
         }
@@ -321,9 +311,7 @@
 </head>
 <body>
 
-    <!-- Górne przyciski w rogu -->
     <div class="top-controls">
-        <!-- Przycisk Języki -->
         <div style="position: relative;">
             <button class="action-btn" id="langBtn" onclick="toggleMenu('langDropdown')">Języki 🌐</button>
             <div class="dropdown-menu" id="langDropdown">
@@ -332,7 +320,6 @@
             </div>
         </div>
 
-        <!-- Przycisk Motywy -->
         <div style="position: relative;">
             <button class="action-btn" id="themeBtn" onclick="toggleMenu('themeDropdown')">Motywy 🎨</button>
             <div class="dropdown-menu" id="themeDropdown">
@@ -342,14 +329,13 @@
             </div>
         </div>
 
-        <!-- Przycisk Kontakt / Główna -->
         <button class="action-btn" id="contactToggleBtn" onclick="toggleContact()">Kontakt</button>
     </div>
 
     <!-- GŁÓWNA STRONA Z GRAMI -->
     <div class="main-container" id="gamesView">
         <h1 class="main-title" id="tMainTitle">Gry Antka 🎮</h1>
-        <p class="subtitle" id="tSubtitle">gowniane gry ze scratcha ktore zrobił antek</p>
+        <p class="subtitle" id="tSubtitle">śmieszne gry ze scratcha ktore zrobił antek</p>
         
         <h2 class="section-title" id="tSectionTitle">skup majonezy kieleckie</h2>
         
@@ -360,13 +346,13 @@
         <p class="footer-note" id="tFooterNote">to narazie tyle gier poczekaj chwile na troche gier</p>
     </div>
 
-    <!-- WIDOK KONTAKTU (ukryty domyślnie) -->
+    <!-- WIDOK KONTAKTU -->
     <div class="main-container hidden" id="contactView">
         <h1 class="main-title" id="tContactTitle">Kontakt ✉️</h1>
         <p class="subtitle" id="tContactSubtitle">Masz pomysł na grę albo znalazłeś błąd?</p>
         
         <p class="contact-info-text" id="tContactText">
-            Jeśli coś nie działa, gra ma buga albo masz kozacki pomysł na nową gierkę, śmiało pisz na maila:
+            Jeśli coś nie działa, gra has buga albo masz kozacki pomysł na nową gierkę, śmiało pisz na maila:
         </p>
         
         <div class="contact-content">
@@ -388,7 +374,7 @@
                 langBtnText: "Języki 🌐",
                 themeBtnText: "Motywy 🎨",
                 mainTitle: "Gry Antka 🎮",
-                subtitle: "smieszne gry ze scratcha ktore zrobił antek",
+                subtitle: "śmieszne gry ze scratcha ktore zrobił antek",
                 sectionTitle: "skup majonezy kieleckie",
                 footerNote: "to narazie tyle gier poczekaj chwile na troche gier",
                 contactTitle: "Kontakt ✉️",
@@ -434,7 +420,6 @@
 
         function toggleMenu(menuId) {
             const menu = document.getElementById(menuId);
-            // Zamknij drugie menu jeśli jest otwarte
             document.querySelectorAll('.dropdown-menu').forEach(m => {
                 if (m.id !== menuId) m.classList.remove('show');
             });
@@ -477,13 +462,11 @@
             document.getElementById('langDropdown').classList.remove('show');
         }
 
-        // Zamykanie menu po kliknięciu poza nimi
         window.onclick = function(event) {
             if (!event.target.closest('.top-controls')) {
                 document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('show'));
             }
         }
     </script>
-    
 </body>
 </html>
