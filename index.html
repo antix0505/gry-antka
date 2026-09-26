@@ -323,9 +323,9 @@
         <div style="position: relative;">
             <button class="action-btn" id="themeBtn" onclick="toggleMenu('themeDropdown')">Motywy 🎨</button>
             <div class="dropdown-menu" id="themeDropdown">
-                <button class="dropdown-option" onclick="setTheme('green')">🟢 Zielony</button>
-                <button class="dropdown-option" onclick="setTheme('red')">🔴 Czerwony</button>
-                <button class="dropdown-option" onclick="setTheme('blue')">🔵 Niebieski</button>
+                <button class="dropdown-option" id="optGreen" onclick="setTheme('green')">🟢 Zielony</button>
+                <button class="dropdown-option" id="optRed" onclick="setTheme('red')">🔴 Czerwony</button>
+                <button class="dropdown-option" id="optBlue" onclick="setTheme('blue')">🔵 Niebieski</button>
             </div>
         </div>
 
@@ -352,7 +352,7 @@
         <p class="subtitle" id="tContactSubtitle">Masz pomysł na grę albo znalazłeś błąd?</p>
         
         <p class="contact-info-text" id="tContactText">
-            Jeśli coś nie działa, gra has buga albo masz kozacki pomysł na nową gierkę, śmiało pisz na maila:
+            Jeśli coś nie działa, gra ma buga albo masz kozacki pomysł na nową gierkę, śmiało pisz na maila:
         </p>
         
         <div class="contact-content">
@@ -373,6 +373,9 @@
                 homeBtn: "Strona Główna",
                 langBtnText: "Języki 🌐",
                 themeBtnText: "Motywy 🎨",
+                themeGreen: "🟢 Zielony",
+                themeRed: "🔴 Czerwony",
+                themeBlue: "🔵 Niebieski",
                 mainTitle: "Gry Antka 🎮",
                 subtitle: "śmieszne gry ze scratcha ktore zrobił antek",
                 sectionTitle: "skup majonezy kieleckie",
@@ -388,6 +391,9 @@
                 homeBtn: "Home",
                 langBtnText: "Languages 🌐",
                 themeBtnText: "Themes 🎨",
+                themeGreen: "🟢 Green",
+                themeRed: "🔴 Red",
+                themeBlue: "🔵 Blue",
                 mainTitle: "Antek's Games 🎮",
                 subtitle: "funny scratch games made by antek",
                 sectionTitle: "kielce mayonnaise collection",
@@ -445,6 +451,10 @@
             document.getElementById('pageTitle').textContent = t.pageTitle;
             document.getElementById('langBtn').textContent = t.langBtnText;
             document.getElementById('themeBtn').textContent = t.themeBtnText;
+            
+            document.getElementById('optGreen').textContent = t.themeGreen;
+            document.getElementById('optRed').textContent = t.themeRed;
+            document.getElementById('optBlue').textContent = t.themeBlue;
             
             const contactBtn = document.getElementById('contactToggleBtn');
             contactBtn.textContent = isContactOpen ? t.homeBtn : t.contactBtn;
