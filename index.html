@@ -105,7 +105,6 @@
             overflow-x: hidden;
         }
 
-        /* DODANO ELEMENT TŁA Z FILTREM JASNOŚCI */
         body::before {
             content: "";
             position: fixed;
@@ -117,12 +116,10 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            /* TUTAJ ROZJAŚNIAMY OBRAZEK (zmień 1.3 na wyższą lub niższą wartość w razie potrzeby) */
             filter: brightness(1.35) contrast(1.05);
             z-index: -2;
         }
 
-        /* DELIKATNA WARSTWA CIEMNIACZNIA, ŻEBY TEKST BYŁ CZYTELNY */
         body::after {
             content: "";
             position: fixed;
@@ -233,18 +230,22 @@
         .section-title {
             font-size: 1.8rem;
             font-weight: 800;
-            margin-bottom: 20px;
+            margin: 25px 0 20px 0;
             color: var(--section-title);
             text-transform: uppercase;
             letter-spacing: 1px;
             text-shadow: 0 0 12px var(--section-shadow);
         }
 
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
         .game-wrapper {
             background: rgba(0, 0, 0, 0.5);
             border-radius: 12px;
             padding: 10px;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             border: 1px solid var(--border-color);
             max-width: 100%;
             overflow: hidden;
@@ -262,6 +263,7 @@
             font-size: 0.95rem;
             font-style: italic;
             opacity: 0.8;
+            margin-top: 15px;
         }
 
         .contact-info-text {
@@ -335,10 +337,14 @@
         <h1 class="main-title" id="tMainTitle">Gry Antka 🎮</h1>
         <p class="subtitle" id="tSubtitle">śmieszne gry ze scratcha ktore zrobił antek</p>
         
-        <h2 class="section-title" id="tSectionTitle">skup majonezy kieleckie</h2>
-        
+        <h2 class="section-title" id="tSection1Title">skup majonezy kieleckie</h2>
         <div class="game-wrapper">
             <iframe src="https://scratch.mit.edu/projects/1306510579/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+        
+        <h2 class="section-title" id="tSection2Title">car simulator beta</h2>
+        <div class="game-wrapper">
+            <iframe src="https://scratch.mit.edu/projects/1232090958/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
         </div>
         
         <p class="footer-note" id="tFooterNote">to narazie tyle gier poczekaj chwile na troche gier</p>
@@ -376,8 +382,9 @@
                 themeBlue: "🔵 Niebieski",
                 mainTitle: "Gry Antka 🎮",
                 subtitle: "śmieszne gry ze scratcha ktore zrobił antek",
-                sectionTitle: "skup majonezy kieleckie",
-        footerNote: "to narazie tyle gier poczekaj chwile na troche gier",
+                section1Title: "skup majonezy kieleckie",
+                section2Title: "car simulator beta",
+                footerNote: "to narazie tyle gier poczekaj chwile na troche gier",
                 contactTitle: "Kontakt ✉️",
                 contactSubtitle: "Masz pomysł na grę albo znalazłeś błąd?",
                 contactText: "Jeśli coś nie działa, gra ma buga albo masz kozacki pomysł na nową gierkę, śmiało pisz na maila:",
@@ -394,7 +401,8 @@
                 themeBlue: "🔵 Blue",
                 mainTitle: "Antek's Games 🎮",
                 subtitle: "funny scratch games made by antek",
-                sectionTitle: "kielce mayonnaise collection",
+                section1Title: "kielce mayonnaise collection",
+                section2Title: "car simulator beta",
                 footerNote: "that's all the games for now, wait a moment for more",
                 contactTitle: "Contact ✉️",
                 contactSubtitle: "Got a game idea or found a bug?",
@@ -459,7 +467,8 @@
 
             document.getElementById('tMainTitle').textContent = t.mainTitle;
             document.getElementById('tSubtitle').textContent = t.subtitle;
-            document.getElementById('tSectionTitle').textContent = t.sectionTitle;
+            document.getElementById('tSection1Title').textContent = t.section1Title;
+            document.getElementById('tSection2Title').textContent = t.section2Title;
             document.getElementById('tFooterNote').textContent = t.footerNote;
 
             document.getElementById('tContactTitle').textContent = t.contactTitle;
