@@ -203,7 +203,7 @@
             border: 2px solid var(--border-color);
             border-radius: 30px;
             padding: 40px 30px;
-            max-width: 600px;
+            max-width: 650px;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -212,13 +212,17 @@
             text-align: center;
         }
 
-        .main-title {
-            font-size: 2.8rem;
-            font-weight: 900;
+        .main-logo-container {
             margin-bottom: 15px;
-            color: var(--title-color);
-            text-shadow: 0 0 15px var(--title-shadow);
-            letter-spacing: 1px;
+            max-width: 100%;
+        }
+
+        .main-logo-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(0 0 10px var(--title-shadow));
         }
 
         .subtitle {
@@ -227,17 +231,20 @@
             margin-bottom: 30px;
         }
 
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 800;
-            margin: 25px 0 20px 0;
-            color: var(--section-title);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-shadow: 0 0 12px var(--section-shadow);
+        .game-title-logo {
+            margin: 25px 0 15px 0;
+            max-width: 100%;
         }
 
-        .section-title:first-of-type {
+        .game-title-logo img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(0 0 10px var(--section-shadow));
+        }
+
+        .game-title-logo:first-of-type {
             margin-top: 0;
         }
 
@@ -245,7 +252,7 @@
             background: rgba(0, 0, 0, 0.5);
             border-radius: 12px;
             padding: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             border: 1px solid var(--border-color);
             max-width: 100%;
             overflow: hidden;
@@ -266,224 +273,10 @@
             margin-top: 15px;
         }
 
-        .contact-info-text {
-            color: var(--subtitle-color);
-            font-size: 1.05rem;
-            margin-bottom: 20px;
-            line-height: 1.5;
+        .cooltext-credit {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-top: 12px;
         }
 
-        .contact-content {
-            font-size: 1.4rem;
-            color: var(--mail-text);
-            margin: 15px 0 25px 0;
-            font-weight: bold;
-            text-shadow: 0 0 10px var(--mail-shadow);
-            user-select: all;
-            background: var(--mail-bg);
-            padding: 12px 20px;
-            border-radius: 10px;
-            border: 1px solid var(--mail-border);
-        }
-
-        .back-btn {
-            background: rgba(255, 204, 0, 0.2);
-            border: 2px solid #ffcc00;
-            color: #ffcc00;
-            padding: 8px 20px;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: all 0.2s ease;
-        }
-
-        .back-btn:hover {
-            background: rgba(255, 204, 0, 0.4);
-            box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
-        }
-
-        .hidden {
-            display: none !important;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="top-controls">
-        <div style="position: relative;">
-            <button class="action-btn" id="langBtn" onclick="toggleMenu('langDropdown')">Języki 🌐</button>
-            <div class="dropdown-menu" id="langDropdown">
-                <button class="dropdown-option" onclick="setLanguage('pl')">🇵🇱 Polski</button>
-                <button class="dropdown-option" onclick="setLanguage('en')">🇬🇧 English</button>
-            </div>
-        </div>
-
-        <div style="position: relative;">
-            <button class="action-btn" id="themeBtn" onclick="toggleMenu('themeDropdown')">Motywy 🎨</button>
-            <div class="dropdown-menu" id="themeDropdown">
-                <button class="dropdown-option" id="optGreen" onclick="setTheme('green')">🟢 Zielony</button>
-                <button class="dropdown-option" id="optRed" onclick="setTheme('red')">🔴 Czerwony</button>
-                <button class="dropdown-option" id="optBlue" onclick="setTheme('blue')">🔵 Niebieski</button>
-            </div>
-        </div>
-
-        <button class="action-btn" id="contactToggleBtn" onclick="toggleContact()">Kontakt</button>
-    </div>
-
-    <!-- GŁÓWNA STRONA Z GRAMI -->
-    <div class="main-container" id="gamesView">
-        <h1 class="main-title" id="tMainTitle">Gry Antka 🎮</h1>
-        <p class="subtitle" id="tSubtitle">śmieszne gry ze scratcha ktore zrobił antek</p>
-        
-        <h2 class="section-title" id="tSection1Title">skup majonezy kieleckie</h2>
-        <div class="game-wrapper">
-            <iframe src="https://scratch.mit.edu/projects/1306510579/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-        
-        <h2 class="section-title" id="tSection2Title">car simulator beta</h2>
-        <div class="game-wrapper">
-            <iframe src="https://scratch.mit.edu/projects/1232090958/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-        
-        <p class="footer-note" id="tFooterNote">to narazie tyle gier poczekaj chwile na troche gier</p>
-    </div>
-
-    <!-- WIDOK KONTAKTU -->
-    <div class="main-container hidden" id="contactView">
-        <h1 class="main-title" id="tContactTitle">Kontakt ✉️</h1>
-        <p class="subtitle" id="tContactSubtitle">Masz pomysł na grę albo znalazłeś błąd?</p>
-        
-        <p class="contact-info-text" id="tContactText">
-            Jeśli coś nie działa, gra ma buga albo masz kozacki pomysł na nową gierkę, śmiało pisz na maila:
-        </p>
-        
-        <div class="contact-content">
-            antix0505@proton.me
-        </div>
-        
-        <button class="back-btn" id="tBackBtn" onclick="toggleContact()">Powrót do gier</button>
-    </div>
-
-    <script>
-        let currentLang = 'pl';
-        let isContactOpen = false;
-
-        const translations = {
-            pl: {
-                pageTitle: "Gry Antka",
-                contactBtn: "Kontakt",
-                homeBtn: "Strona Główna",
-                langBtnText: "Języki 🌐",
-                themeBtnText: "Motywy 🎨",
-                themeGreen: "🟢 Zielony",
-                themeRed: "🔴 Czerwony",
-                themeBlue: "🔵 Niebieski",
-                mainTitle: "Gry Antka 🎮",
-                subtitle: "śmieszne gry ze scratcha ktore zrobił antek",
-                section1Title: "skup majonezy kieleckie",
-                section2Title: "car simulator beta",
-                footerNote: "to narazie tyle gier poczekaj chwile na troche gier",
-                contactTitle: "Kontakt ✉️",
-                contactSubtitle: "Masz pomysł na grę albo znalazłeś błąd?",
-                contactText: "Jeśli coś nie działa, gra ma buga albo masz kozacki pomysł na nową gierkę, śmiało pisz na maila:",
-                backBtn: "Powrót do gier"
-            },
-            en: {
-                pageTitle: "Antek's Games",
-                contactBtn: "Contact",
-                homeBtn: "Home",
-                langBtnText: "Languages 🌐",
-                themeBtnText: "Themes 🎨",
-                themeGreen: "🟢 Green",
-                themeRed: "🔴 Red",
-                themeBlue: "🔵 Blue",
-                mainTitle: "Antek's Games 🎮",
-                subtitle: "funny scratch games made by antek",
-                section1Title: "kielce mayonnaise collection",
-                section2Title: "car simulator beta",
-                footerNote: "that's all the games for now, wait a moment for more",
-                contactTitle: "Contact ✉️",
-                contactSubtitle: "Got a game idea or found a bug?",
-                contactText: "If something doesn't work, has a bug or you have an awesome idea for a new game, feel free to email:",
-                backBtn: "Back to games"
-            }
-        };
-
-        function toggleContact() {
-            const gamesView = document.getElementById('gamesView');
-            const contactView = document.getElementById('contactView');
-            const btn = document.getElementById('contactToggleBtn');
-            const t = translations[currentLang];
-
-            isContactOpen = !isContactOpen;
-
-            if (isContactOpen) {
-                gamesView.classList.add('hidden');
-                contactView.classList.remove('hidden');
-                btn.textContent = t.homeBtn;
-            } else {
-                gamesView.classList.remove('hidden');
-                contactView.classList.add('hidden');
-                btn.textContent = t.contactBtn;
-            }
-        }
-
-        function toggleMenu(menuId) {
-            const menu = document.getElementById(menuId);
-            document.querySelectorAll('.dropdown-menu').forEach(m => {
-                if (m.id !== menuId) m.classList.remove('show');
-            });
-            menu.classList.toggle('show');
-        }
-
-        function setTheme(themeName) {
-            const body = document.body;
-            body.classList.remove('theme-red', 'theme-blue');
-            
-            if (themeName === 'red') {
-                body.classList.add('theme-red');
-            } else if (themeName === 'blue') {
-                body.classList.add('theme-blue');
-            }
-            document.getElementById('themeDropdown').classList.remove('show');
-        }
-
-        function setLanguage(lang) {
-            currentLang = lang;
-            const t = translations[lang];
-
-            document.getElementById('pageTitle').textContent = t.pageTitle;
-            document.getElementById('langBtn').textContent = t.langBtnText;
-            document.getElementById('themeBtn').textContent = t.themeBtnText;
-            
-            document.getElementById('optGreen').textContent = t.themeGreen;
-            document.getElementById('optRed').textContent = t.themeRed;
-            document.getElementById('optBlue').textContent = t.themeBlue;
-            
-            const contactBtn = document.getElementById('contactToggleBtn');
-            contactBtn.textContent = isContactOpen ? t.homeBtn : t.contactBtn;
-
-            document.getElementById('tMainTitle').textContent = t.mainTitle;
-            document.getElementById('tSubtitle').textContent = t.subtitle;
-            document.getElementById('tSection1Title').textContent = t.section1Title;
-            document.getElementById('tSection2Title').textContent = t.section2Title;
-            document.getElementById('tFooterNote').textContent = t.footerNote;
-
-            document.getElementById('tContactTitle').textContent = t.contactTitle;
-            document.getElementById('tContactSubtitle').textContent = t.contactSubtitle;
-            document.getElementById('tContactText').textContent = t.contactText;
-            document.getElementById('tBackBtn').textContent = t.backBtn;
-
-            document.getElementById('langDropdown').classList.remove('show');
-        }
-
-        window.onclick = function(event) {
-            if (!event.target.closest('.top-controls')) {
-                document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('show'));
-            }
-        }
-    </script>
-</body>
-</html>
+        .cooltext-credit a {
