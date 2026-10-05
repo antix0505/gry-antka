@@ -360,10 +360,15 @@
         </div>
         <p class="subtitle" id="tSubtitle">śmieszne gry ze scratcha ktore zrobił antek</p>
         
-        <!-- GRA 1: Skup majonezy kieleckie / Buy Mayo Kieleckie (zależnie od języka) -->
+        <!-- GRA 1: Skup majonezy kieleckie (PL) / Buy Mayo Kieleckie (EN) -->
         <div class="game-title-logo">
-            <a href="https://cooltext.com" id="game1Link">
-                <img id="game1LogoImg" src="https://images.cooltext.com/5765017.gif" width="1015" height="92" alt="SKUP MAJONEZY KIELECKIE" />
+            <!-- Polska wersja logo -->
+            <a href="https://cooltext.com" class="lang-pl-elem">
+                <img src="https://images.cooltext.com/5765017.gif" width="1015" height="92" alt="SKUP MAJONEZY KIELECKIE" />
+            </a>
+            <!-- Angielska wersja logo (domyślnie ukryta) -->
+            <a href="https://cooltext.com" class="lang-en-elem hidden">
+                <img src="https://images.cooltext.com/5765019.gif" width="807" height="92" alt="BUY MAYO KIELECKIE" />
             </a>
         </div>
         <div class="game-wrapper">
@@ -425,11 +430,7 @@
                 footerNote: "to narazie tyle gier poczekaj chwile na troche gier",
                 contactSubtitle: "Masz pomysł na grę albo znalazłeś błąd?",
                 contactText: "Jeśli coś nie działa, gra ma buga albo masz kozacki pomysł na nową gierkę, śmiało pisz na maila:",
-                backBtn: "Powrót do gier",
-                game1Src: "https://images.cooltext.com/5765017.gif",
-                game1Width: "1015",
-                game1Height: "92",
-                game1Alt: "SKUP MAJONEZY KIELECKIE"
+                backBtn: "Powrót do gier"
             },
             en: {
                 pageTitle: "Antek's Games",
@@ -438,17 +439,13 @@
                 langBtnText: "Languages 🌐",
                 themeBtnText: "Themes 🎨",
                 themeGreen: "🟢 Green",
-                themeRed: "🔴 Red",
+                themeRed: "🟢 Red",
                 themeBlue: "🔵 Blue",
                 subtitle: "funny scratch games made by antek",
                 footerNote: "that's all the games for now, wait a moment for more",
                 contactSubtitle: "Got a game idea or found a bug?",
                 contactText: "If something doesn't work, has a bug or you have an awesome idea for a new game, feel free to email:",
-                backBtn: "Back to games",
-                game1Src: "https://images.cooltext.com/5765019.gif",
-                game1Width: "807",
-                game1Height: "92",
-                game1Alt: "BUY MAYO KIELECKIE"
+                backBtn: "Back to games"
             }
         };
 
@@ -513,12 +510,17 @@
             document.getElementById('tContactText').textContent = t.contactText;
             document.getElementById('tBackBtn').textContent = t.backBtn;
 
-            // Zmiana logo majonezu w zależności od języka
-            const g1Img = document.getElementById('game1LogoImg');
-            g1Img.src = t.game1Src;
-            g1Img.width = t.game1Width;
-            g1Img.height = t.game1Height;
-            g1Img.alt = t.game1Alt;
+            // Przełączanie widoczności logo w zależności od języka
+            const plElems = document.querySelectorAll('.lang-pl-elem');
+            const enElems = document.querySelectorAll('.lang-en-elem');
+
+            if (lang === 'en') {
+                plElems.forEach(el => el.classList.add('hidden'));
+                enElems.forEach(el => el.classList.remove('hidden'));
+            } else {
+                plElems.forEach(el => el.classList.remove('hidden'));
+                enElems.forEach(el => el.classList.add('hidden'));
+            }
 
             document.getElementById('langDropdown').classList.remove('show');
         }
