@@ -14,9 +14,9 @@
 
         :root {
             /* DOMYŚLNY MOTYW: ZIELONY */
-            --bg-image: url('green.png');
-            --container-bg-1: rgba(8, 45, 20, 0.85);
-            --container-bg-2: rgba(3, 20, 8, 0.90);
+            --bg-file: url('green.png');
+            --container-bg-1: rgba(8, 45, 20, 0.90);
+            --container-bg-2: rgba(3, 20, 8, 0.95);
             --border-color: rgba(0, 255, 100, 0.4);
             --shadow-color: rgba(0, 255, 100, 0.15);
             
@@ -41,9 +41,9 @@
 
         /* MOTYW: CZERWONY */
         body.theme-red {
-            --bg-image: url('red.png');
-            --container-bg-1: rgba(45, 8, 8, 0.85);
-            --container-bg-2: rgba(20, 3, 3, 0.90);
+            --bg-file: url('red.png');
+            --container-bg-1: rgba(45, 8, 8, 0.90);
+            --container-bg-2: rgba(20, 3, 3, 0.95);
             --border-color: rgba(255, 50, 50, 0.4);
             --shadow-color: rgba(255, 50, 50, 0.15);
             
@@ -68,9 +68,9 @@
 
         /* MOTYW: NIEBIESKI */
         body.theme-blue {
-            --bg-image: url('blue.png');
-            --container-bg-1: rgba(8, 25, 45, 0.85);
-            --container-bg-2: rgba(3, 10, 20, 0.90);
+            --bg-file: url('blue.png');
+            --container-bg-1: rgba(8, 25, 45, 0.90);
+            --container-bg-2: rgba(3, 10, 20, 0.95);
             --border-color: rgba(0, 150, 255, 0.4);
             --shadow-color: rgba(0, 150, 255, 0.15);
             
@@ -100,9 +100,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 40px 20px;
             position: relative;
             overflow-x: hidden;
+            background-color: #050505;
         }
 
         body::before {
@@ -112,11 +113,11 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--bg-image);
+            background-image: var(--bg-file);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            filter: brightness(1.35) contrast(1.05);
+            filter: brightness(1.2) contrast(1.05);
             z-index: -2;
         }
 
@@ -127,7 +128,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.35);
+            background: rgba(0, 0, 0, 0.5);
             z-index: -1;
         }
 
@@ -199,7 +200,8 @@
 
         .main-container {
             background: linear-gradient(135deg, var(--container-bg-1), var(--container-bg-2));
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border: 2px solid var(--border-color);
             border-radius: 30px;
             padding: 40px 30px;
@@ -208,8 +210,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), inset 0 0 15px var(--shadow-color);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), inset 0 0 15px var(--shadow-color);
             text-align: center;
+            z-index: 10;
         }
 
         .main-logo-container {
@@ -249,7 +252,7 @@
         }
 
         .game-wrapper {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.6);
             border-radius: 12px;
             padding: 10px;
             margin-bottom: 10px;
@@ -357,8 +360,10 @@
         </div>
         <p class="subtitle" id="tSubtitle">śmieszne gry ze scratcha ktore zrobił antek</p>
         
-        <!-- GRA 1: Skup majonezy kieleckie (tutaj damy logo jak wyslesz, na razie zostaje nagłówek / możesz też podmienić) -->
-        <h2 class="section-title" id="tSection1Title" style="font-size: 1.8rem; font-weight: 800; margin: 25px 0 20px 0; color: var(--section-title); text-transform: uppercase; text-shadow: 0 0 12px var(--section-shadow);">skup majonezy kieleckie</h2>
+        <!-- GRA 1: Skup majonezy kieleckie z logo Cool Text -->
+        <div class="game-title-logo">
+            <a href="https://cooltext.com"><img src="https://images.cooltext.com/5765017.gif" width="1015" height="92" alt="SKUP MAJONEZY KIELECKIE" /></a>
+        </div>
         <div class="game-wrapper">
             <iframe src="https://scratch.mit.edu/projects/1306510579/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
         </div>
@@ -374,7 +379,7 @@
         <p class="footer-note" id="tFooterNote">to narazie tyle gier poczekaj chwile na troche gier</p>
         
         <div class="cooltext-credit">
-            Image Provided by <a href="https://cooltext.com" target="_blank">Cool Text</a>
+            Image and Text Provided by <a href="https://cooltext.com" target="_blank">Cool Text</a>
         </div>
     </div>
 
@@ -396,7 +401,7 @@
         <button class="back-btn" id="tBackBtn" onclick="toggleContact()">Powrót do gier</button>
         
         <div class="cooltext-credit">
-            Image Provided by <a href="https://cooltext.com" target="_blank">Cool Text</a>
+            Image and Text Provided by <a href="https://cooltext.com" target="_blank">Cool Text</a>
         </div>
     </div>
 
@@ -427,7 +432,7 @@
                 langBtnText: "Languages 🌐",
                 themeBtnText: "Themes 🎨",
                 themeGreen: "🟢 Green",
-                themeRed: "🔴 Red",
+                themeRed: "🟢 Red",
                 themeBlue: "🔵 Blue",
                 subtitle: "funny scratch games made by antek",
                 footerNote: "that's all the games for now, wait a moment for more",
