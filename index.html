@@ -10,88 +10,70 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+            transition: background 0.4s ease, border-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
         }
 
         :root {
-            /* DOMYŚLNY MOTYW: ZIELONY */
+            /* DOMYŚLNY MOTYW: ZIELONY (Frutiger Aero Glass) */
             --bg-file: url('green.png');
-            --container-bg-1: rgba(8, 45, 20, 0.90);
-            --container-bg-2: rgba(3, 20, 8, 0.95);
-            --border-color: rgba(0, 255, 100, 0.4);
-            --shadow-color: rgba(0, 255, 100, 0.15);
+            --window-bg: linear-gradient(135deg, rgba(15, 60, 25, 0.75), rgba(5, 25, 10, 0.85));
+            --window-header: linear-gradient(to bottom, rgba(40, 180, 90, 0.85), rgba(10, 90, 35, 0.9));
+            --border-color: rgba(0, 255, 140, 0.7);
+            --inner-border: rgba(0, 255, 140, 0.3);
+            --shadow-glow: 0 0 30px rgba(0, 255, 120, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -2px 5px rgba(0, 0, 0, 0.5);
             
-            --title-color: #00ffcc;
-            --title-shadow: rgba(0, 255, 204, 0.5);
-            --subtitle-color: #a0c4de;
+            --title-color: #ffffff;
+            --subtitle-color: #b0ffdf;
             
-            --section-title: #ffcc00;
-            --section-shadow: rgba(255, 204, 0, 0.4);
+            --btn-bg: linear-gradient(to bottom, rgba(30, 110, 50, 0.8), rgba(10, 60, 25, 0.9));
+            --btn-border: rgba(0, 255, 140, 0.8);
+            --btn-text: #d2ffec;
+            --btn-hover-bg: linear-gradient(to bottom, rgba(50, 180, 80, 0.9), rgba(20, 100, 40, 0.95));
             
-            --btn-bg: rgba(10, 50, 20, 0.9);
-            --btn-border: rgba(0, 255, 100, 0.6);
-            --btn-text: #00ffcc;
-            --btn-hover-bg: rgba(0, 255, 100, 0.2);
-            --btn-hover-shadow: rgba(0, 255, 100, 0.6);
-            
-            --mail-bg: rgba(0, 0, 0, 0.6);
-            --mail-border: rgba(0, 255, 100, 0.3);
+            --mail-bg: rgba(0, 0, 0, 0.45);
             --mail-text: #00ffcc;
-            --mail-shadow: rgba(0, 255, 204, 0.4);
         }
 
-        /* MOTYW: CZERWONY */
+        /* MOTYW: CZERWONY (Glass 🔥) */
         body.theme-red {
             --bg-file: url('red.png');
-            --container-bg-1: rgba(45, 8, 8, 0.90);
-            --container-bg-2: rgba(20, 3, 3, 0.95);
-            --border-color: rgba(255, 50, 50, 0.4);
-            --shadow-color: rgba(255, 50, 50, 0.15);
+            --window-bg: linear-gradient(135deg, rgba(60, 15, 15, 0.75), rgba(25, 5, 5, 0.85));
+            --window-header: linear-gradient(to bottom, rgba(180, 40, 40, 0.85), rgba(90, 10, 10, 0.9));
+            --border-color: rgba(255, 90, 90, 0.7);
+            --inner-border: rgba(255, 90, 90, 0.3);
+            --shadow-glow: 0 0 30px rgba(255, 50, 50, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -2px 5px rgba(0, 0, 0, 0.5);
             
-            --title-color: #ff3366;
-            --title-shadow: rgba(255, 51, 102, 0.5);
-            --subtitle-color: #deb0b0;
+            --title-color: #ffffff;
+            --subtitle-color: #ffd0d0;
             
-            --section-title: #ffcc00;
-            --section-shadow: rgba(255, 204, 0, 0.4);
+            --btn-bg: linear-gradient(to bottom, rgba(110, 30, 30, 0.8), rgba(60, 10, 10, 0.9));
+            --btn-border: rgba(255, 90, 90, 0.8);
+            --btn-text: #ffdcdc;
+            --btn-hover-bg: linear-gradient(to bottom, rgba(180, 50, 50, 0.9), rgba(100, 20, 20, 0.95));
             
-            --btn-bg: rgba(50, 10, 10, 0.9);
-            --btn-border: rgba(255, 50, 50, 0.6);
-            --btn-text: #ff3366;
-            --btn-hover-bg: rgba(255, 50, 50, 0.2);
-            --btn-hover-shadow: rgba(255, 50, 50, 0.6);
-            
-            --mail-bg: rgba(0, 0, 0, 0.6);
-            --mail-border: rgba(255, 50, 50, 0.3);
+            --mail-bg: rgba(0, 0, 0, 0.45);
             --mail-text: #ff3366;
-            --mail-shadow: rgba(255, 51, 102, 0.4);
         }
 
-        /* MOTYW: NIEBIESKI */
+        /* MOTYW: NIEBIESKI (Glass 🧊) */
         body.theme-blue {
             --bg-file: url('blue.png');
-            --container-bg-1: rgba(8, 25, 45, 0.90);
-            --container-bg-2: rgba(3, 10, 20, 0.95);
-            --border-color: rgba(0, 150, 255, 0.4);
-            --shadow-color: rgba(0, 150, 255, 0.15);
+            --window-bg: linear-gradient(135deg, rgba(15, 40, 70, 0.75), rgba(5, 15, 30, 0.85));
+            --window-header: linear-gradient(to bottom, rgba(40, 120, 220, 0.85), rgba(10, 60, 130, 0.9));
+            --border-color: rgba(80, 180, 255, 0.7);
+            --inner-border: rgba(80, 180, 255, 0.3);
+            --shadow-glow: 0 0 30px rgba(0, 140, 255, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -2px 5px rgba(0, 0, 0, 0.5);
             
-            --title-color: #33bbff;
-            --title-shadow: rgba(51, 187, 255, 0.5);
-            --subtitle-color: #b0d0de;
+            --title-color: #ffffff;
+            --subtitle-color: #d0e8ff;
             
-            --section-title: #ffcc00;
-            --section-shadow: rgba(255, 204, 0, 0.4);
+            --btn-bg: linear-gradient(to bottom, rgba(30, 80, 140, 0.8), rgba(10, 40, 80, 0.9));
+            --btn-border: rgba(80, 180, 255, 0.8);
+            --btn-text: #dcjdcff;
+            --btn-hover-bg: linear-gradient(to bottom, rgba(60, 140, 220, 0.9), rgba(20, 70, 130, 0.95));
             
-            --btn-bg: rgba(10, 30, 50, 0.9);
-            --btn-border: rgba(0, 150, 255, 0.6);
-            --btn-text: #33bbff;
-            --btn-hover-bg: rgba(0, 150, 255, 0.2);
-            --btn-hover-shadow: rgba(0, 150, 255, 0.6);
-            
-            --mail-bg: rgba(0, 0, 0, 0.6);
-            --mail-border: rgba(0, 150, 255, 0.3);
+            --mail-bg: rgba(0, 0, 0, 0.45);
             --mail-text: #33bbff;
-            --mail-shadow: rgba(51, 187, 255, 0.4);
         }
 
         body {
@@ -101,7 +83,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 40px 20px;
+            padding: 15px;
             position: relative;
             overflow-x: hidden;
             background-color: #050505;
@@ -118,7 +100,7 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            filter: brightness(1.2) contrast(1.05);
+            filter: brightness(1.15) contrast(1.05);
             z-index: -2;
         }
 
@@ -129,158 +111,182 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.3);
             z-index: -1;
         }
 
-        .top-controls {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 10px;
-            z-index: 100;
-        }
-
-        .action-btn {
-            background: var(--btn-bg);
-            border: 2px solid var(--btn-border);
-            color: var(--btn-text);
-            padding: 10px 18px;
-            border-radius: 12px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 0 15px var(--shadow-color);
-            transition: all 0.2s ease;
-        }
-
-        .action-btn:hover {
-            background: var(--btn-hover-bg);
-            box-shadow: 0 0 20px var(--btn-hover-shadow);
-            transform: scale(1.05);
-        }
-
-        .dropdown-menu {
-            position: absolute;
-            top: 55px;
-            right: 0;
-            background: var(--container-bg-1);
-            border: 2px solid var(--btn-border);
-            border-radius: 12px;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
-            display: none;
-            min-width: 140px;
-        }
-
-        .dropdown-menu.show {
-            display: flex;
-        }
-
-        .dropdown-option {
-            background: transparent;
-            border: 1px solid transparent;
-            color: var(--btn-text);
-            padding: 6px 10px;
-            border-radius: 8px;
-            cursor: pointer;
-            text-align: left;
-            font-size: 0.95rem;
-            font-weight: bold;
-            transition: all 0.2s ease;
-        }
-
-        .dropdown-option:hover {
-            background: var(--btn-hover-bg);
-            border-color: var(--btn-border);
-        }
-
-        .main-container {
-            background: linear-gradient(135deg, var(--container-bg-1), var(--container-bg-2));
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+        /* GŁÓWNE OKNO Z EFEKTEM GLASS-MORPHISM */
+        .aero-window {
+            background: var(--window-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border: 2px solid var(--border-color);
-            border-radius: 30px;
-            padding: 40px 30px;
-            max-width: 650px;
+            border-radius: 14px;
             width: 100%;
+            max-width: 850px;
+            box-shadow: var(--shadow-glow), 0 30px 60px rgba(0, 0, 0, 0.85);
+            overflow: hidden;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), inset 0 0 15px var(--shadow-color);
-            text-align: center;
             z-index: 10;
         }
 
-        .main-logo-container {
-            margin-bottom: 15px;
-            max-width: 100%;
+        .aero-titlebar {
+            background: var(--window-header);
+            padding: 9px 14px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--title-color);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
         }
 
-        .main-logo-container img {
+        .aero-body-layout {
+            display: flex;
+            flex-direction: row;
+        }
+
+        @media (max-width: 768px) {
+            .aero-body-layout {
+                flex-direction: column;
+            }
+        }
+
+        .sidebar-menu {
+            width: 200px;
+            background: rgba(0, 0, 0, 0.25);
+            border-right: 1px solid var(--inner-border);
+            padding: 12px 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            backdrop-filter: blur(6px);
+        }
+
+        @media (max-width: 768px) {
+            .sidebar-menu {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid var(--inner-border);
+            }
+        }
+
+        .menu-group-title {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--subtitle-color);
+            padding-left: 4px;
+            margin-bottom: -4px;
+            opacity: 0.85;
+            font-weight: bold;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .sidebar-btn {
+            background: var(--btn-bg);
+            border: 1px solid var(--btn-border);
+            color: var(--btn-text);
+            padding: 8px 11px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 2px 5px rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+            transition: all 0.2s ease;
+        }
+
+        .sidebar-btn:hover {
+            background: var(--btn-hover-bg);
+            border-color: #ffffff;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 0 12px var(--border-color);
+            transform: translateX(2px);
+        }
+
+        .content-area {
+            flex: 1;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.1);
+            max-height: 78vh;
+            overflow-y: auto;
+        }
+
+        /* Idealne dopasowanie obrazków Cool Text */
+        .main-logo-container img, 
+        .game-title-logo img {
             max-width: 100%;
+            width: auto;
+            max-height: 55px;
             height: auto;
             display: block;
             margin: 0 auto;
-            filter: drop-shadow(0 0 10px var(--title-shadow));
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(0,0,0,0.8));
+        }
+
+        .main-logo-container {
+            margin-bottom: 8px;
         }
 
         .subtitle {
             color: var(--subtitle-color);
-            font-size: 1.1rem;
-            margin-bottom: 30px;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
         }
 
         .game-title-logo {
-            margin: 25px 0 15px 0;
-            max-width: 100%;
-        }
-
-        .game-title-logo img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            filter: drop-shadow(0 0 10px var(--section-shadow));
-        }
-
-        .game-title-logo:first-of-type {
-            margin-top: 0;
+            margin: 18px 0 8px 0;
+            width: 100%;
         }
 
         .game-wrapper {
-            background: rgba(0, 0, 0, 0.6);
-            border-radius: 12px;
-            padding: 10px;
-            margin-bottom: 10px;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 8px;
+            padding: 6px;
+            margin-bottom: 8px;
             border: 1px solid var(--border-color);
             max-width: 100%;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.8), 0 4px 15px rgba(0,0,0,0.5);
         }
 
         .game-wrapper iframe {
             display: block;
             max-width: 100%;
-            border-radius: 8px;
+            width: 450px;
+            height: 350px;
+            border-radius: 4px;
         }
 
         .footer-note {
             color: var(--subtitle-color);
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-style: italic;
-            opacity: 0.8;
-            margin-top: 15px;
+            opacity: 0.85;
+            margin-top: 12px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.6);
         }
 
         .cooltext-credit {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             opacity: 0.6;
-            margin-top: 12px;
+            margin-top: 10px;
         }
 
         .cooltext-credit a {
@@ -290,40 +296,45 @@
 
         .contact-info-text {
             color: var(--subtitle-color);
-            font-size: 1.05rem;
-            margin-bottom: 20px;
-            line-height: 1.5;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.6);
         }
 
         .contact-content {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: var(--mail-text);
-            margin: 15px 0 25px 0;
+            margin: 12px 0 18px 0;
             font-weight: bold;
-            text-shadow: 0 0 10px var(--mail-shadow);
+            text-shadow: 0 0 10px var(--border-color);
             user-select: all;
             background: var(--mail-bg);
-            padding: 12px 20px;
-            border-radius: 10px;
-            border: 1px solid var(--mail-border);
+            backdrop-filter: blur(6px);
+            padding: 8px 15px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
         }
 
         .back-btn {
-            background: rgba(255, 204, 0, 0.2);
-            border: 2px solid #ffcc00;
-            color: #ffcc00;
-            padding: 8px 20px;
-            border-radius: 10px;
-            font-size: 1rem;
+            background: linear-gradient(to bottom, rgba(220, 180, 30, 0.85), rgba(130, 100, 10, 0.9));
+            border: 1px solid #ffcc00;
+            color: #ffffff;
+            padding: 7px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
             font-weight: bold;
             cursor: pointer;
-            margin-top: 10px;
+            margin-top: 8px;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 2px 6px rgba(0,0,0,0.4);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.6);
             transition: all 0.2s ease;
         }
 
         .back-btn:hover {
-            background: rgba(255, 204, 0, 0.4);
-            box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+            background: linear-gradient(to bottom, rgba(255, 200, 40, 0.95), rgba(170, 130, 10, 0.95));
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
         }
 
         .hidden {
@@ -333,100 +344,127 @@
 </head>
 <body>
 
-    <div class="top-controls">
-        <div style="position: relative;">
-            <button class="action-btn" id="langBtn" onclick="toggleMenu('langDropdown')">Języki 🌐</button>
-            <div class="dropdown-menu" id="langDropdown">
-                <button class="dropdown-option" onclick="setLanguage('pl')">🇵🇱 Polski</button>
-                <button class="dropdown-option" onclick="setLanguage('en')">🇬🇧 English</button>
+    <div class="aero-window">
+        <div class="aero-titlebar">
+            <span id="windowTitleBar">Gry Antka - Windows Aero Glass Explorer</span>
+            <span>🗕 🗖 ✕</span>
+        </div>
+
+        <div class="aero-body-layout">
+            <div class="sidebar-menu">
+                <div class="menu-group-title">Nawigacja</div>
+                <button class="sidebar-btn" id="contactToggleBtn" onclick="toggleContact()">🏠 Strona Główna</button>
+                
+                <div class="menu-group-title" style="margin-top: 4px;">Język / Language</div>
+                <button class="sidebar-btn" onclick="setLanguage('pl')">🇵🇱 Polski</button>
+                <button class="sidebar-btn" onclick="setLanguage('en')">🇬🇧 English</button>
+
+                <div class="menu-group-title" style="margin-top: 4px;">Motywy / Themes</div>
+                <button class="sidebar-btn" onclick="setTheme('green')">🟢 Zielony (Aero)</button>
+                <button class="sidebar-btn" onclick="setTheme('red')">🔴 Czerwony 🔥</button>
+                <button class="sidebar-btn" onclick="setTheme('blue')">🔵 Niebieski 🧊</button>
             </div>
-        </div>
 
-        <div style="position: relative;">
-            <button class="action-btn" id="themeBtn" onclick="toggleMenu('themeDropdown')">Motywy 🎨</button>
-            <div class="dropdown-menu" id="themeDropdown">
-                <button class="dropdown-option" id="optGreen" onclick="setTheme('green')">🟢 Zielony</button>
-                <button class="dropdown-option" id="optRed" onclick="setTheme('red')">🔴 Czerwony</button>
-                <button class="dropdown-option" id="optBlue" onclick="setTheme('blue')">🔵 Niebieski</button>
+            <div class="content-area">
+                
+                <!-- WIDOK GIER -->
+                <div id="gamesView" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+                    <div class="main-logo-container">
+                        <a href="https://cooltext.com" target="_blank">
+                            <img id="imgMainLogo" src="https://images.cooltext.com/5765326.png" alt="GRY ANTKA" />
+                        </a>
+                    </div>
+                    <p class="subtitle" id="tSubtitle">śmieszne gry ze scratcha ktore zrobił antek</p>
+                    
+                    <!-- GRA 1: Skup Majonezy (PL / EN) -->
+                    <div class="game-title-logo">
+                        <a href="https://cooltext.com" class="lang-pl-elem">
+                            <img id="imgMayoPl" src="https://images.cooltext.com/5765327.png" alt="SKUP MAJONEZY KIELECKIE" />
+                        </a>
+                        <a href="https://cooltext.com" class="lang-en-elem hidden">
+                            <img id="imgMayoEn" src="https://images.cooltext.com/5765328.png" alt="BUY MAYO KIELECKIE" />
+                        </a>
+                    </div>
+                    <div class="game-wrapper">
+                        <iframe src="https://scratch.mit.edu/projects/1306510579/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                    </div>
+                    
+                    <!-- GRA 2: Car Simulator -->
+                    <div class="game-title-logo">
+                        <a href="https://cooltext.com">
+                            <img id="imgCarSim" src="https://images.cooltext.com/5765329.png" alt="CAR SIMULATOR" />
+                        </a>
+                    </div>
+                    <div class="game-wrapper">
+                        <iframe src="https://scratch.mit.edu/projects/1232090958/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                    </div>
+                    
+                    <p class="footer-note" id="tFooterNote">to narazie tyle gier poczekaj chwile na troche gier</p>
+                    
+                    <div class="cooltext-credit">
+                        Image and Text Provided by <a href="https://cooltext.com" target="_blank">Cool Text</a>
+                    </div>
+                </div>
+
+                <!-- WIDOK KONTAKTU -->
+                <div class="hidden" id="contactView" style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px;">
+                    <div class="main-logo-container">
+                        <a href="https://cooltext.com" target="_blank">
+                            <img id="imgContactMainLogo" src="https://images.cooltext.com/5765326.png" alt="GRY ANTKA" />
+                        </a>
+                    </div>
+                    <p class="subtitle" id="tContactSubtitle">Masz pomysł na grę albo znalazłeś błąd?</p>
+                    
+                    <p class="contact-info-text" id="tContactText">
+                        Jeśli coś nie działa, gra ma buga albo masz kozacki pomysł na nową gierkę, śmiało pisz na maila:
+                    </p>
+                    
+                    <div class="contact-content">
+                        antix0505@proton.me
+                    </div>
+                    
+                    <button class="back-btn" id="tBackBtn" onclick="toggleContact()">Powrót do gier</button>
+                    
+                    <div class="cooltext-credit">
+                        Image and Text Provided by <a href="https://cooltext.com" target="_blank">Cool Text</a>
+                    </div>
+                </div>
+
             </div>
-        </div>
-
-        <button class="action-btn" id="contactToggleBtn" onclick="toggleContact()">Kontakt</button>
-    </div>
-
-    <!-- GŁÓWNA STRONA Z GRAMI -->
-    <div class="main-container" id="gamesView">
-        <div class="main-logo-container">
-            <a href="https://cooltext.com" target="_blank"><img src="https://images.cooltext.com/5765003.gif" width="464" height="92" alt="GRY ANTKA" /></a>
-        </div>
-        <p class="subtitle" id="tSubtitle">śmieszne gry ze scratcha ktore zrobił antek</p>
-        
-        <!-- GRA 1: Skup majonezy kieleckie (PL) / Buy Mayo Kieleckie (EN) -->
-        <div class="game-title-logo">
-            <!-- Polska wersja logo -->
-            <a href="https://cooltext.com" class="lang-pl-elem">
-                <img src="https://images.cooltext.com/5765017.gif" width="1015" height="92" alt="SKUP MAJONEZY KIELECKIE" />
-            </a>
-            <!-- Angielska wersja logo (domyślnie ukryta) -->
-            <a href="https://cooltext.com" class="lang-en-elem hidden">
-                <img src="https://images.cooltext.com/5765019.gif" width="807" height="92" alt="BUY MAYO KIELECKIE" />
-            </a>
-        </div>
-        <div class="game-wrapper">
-            <iframe src="https://scratch.mit.edu/projects/1306510579/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-        
-        <!-- GRA 2: Car Simulator Beta z logo Cool Text -->
-        <div class="game-title-logo">
-            <a href="https://cooltext.com"><img src="https://images.cooltext.com/5765006.gif" width="631" height="92" alt="CAR SIMULATOR" /></a>
-        </div>
-        <div class="game-wrapper">
-            <iframe src="https://scratch.mit.edu/projects/1232090958/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-        
-        <p class="footer-note" id="tFooterNote">to narazie tyle gier poczekaj chwile na troche gier</p>
-        
-        <div class="cooltext-credit">
-            Image and Text Provided by <a href="https://cooltext.com" target="_blank">Cool Text</a>
-        </div>
-    </div>
-
-    <!-- WIDOK KONTAKTU -->
-    <div class="main-container hidden" id="contactView">
-        <div class="main-logo-container">
-            <a href="https://cooltext.com" target="_blank"><img src="https://images.cooltext.com/5765003.gif" width="464" height="92" alt="GRY ANTKA" /></a>
-        </div>
-        <p class="subtitle" id="tContactSubtitle">Masz pomysł na grę albo znalazłeś błąd?</p>
-        
-        <p class="contact-info-text" id="tContactText">
-            Jeśli coś nie działa, gra ma buga albo masz kozacki pomysł na nową gierkę, śmiało pisz na maila:
-        </p>
-        
-        <div class="contact-content">
-            antix0505@proton.me
-        </div>
-        
-        <button class="back-btn" id="tBackBtn" onclick="toggleContact()">Powrót do gier</button>
-        
-        <div class="cooltext-credit">
-            Image and Text Provided by <a href="https://cooltext.com" target="_blank">Cool Text</a>
         </div>
     </div>
 
     <script>
         let currentLang = 'pl';
+        let currentTheme = 'green';
         let isContactOpen = false;
+
+        const themeImages = {
+            green: {
+                mainLogo: "https://images.cooltext.com/5765326.png",
+                mayoPl: "https://images.cooltext.com/5765327.png",
+                mayoEn: "https://images.cooltext.com/5765328.png",
+                carSim: "https://images.cooltext.com/5765329.png"
+            },
+            red: {
+                mainLogo: "https://images.cooltext.com/5765331.gif",
+                mayoPl: "https://images.cooltext.com/5765332.gif",
+                mayoEn: "https://images.cooltext.com/5765333.gif",
+                carSim: "https://images.cooltext.com/5765006.gif"
+            },
+            blue: {
+                mainLogo: "https://images.cooltext.com/5765324.png",
+                mayoPl: "https://images.cooltext.com/5765322.png",
+                mayoEn: "https://images.cooltext.com/5765323.png",
+                carSim: "https://images.cooltext.com/5765325.png"
+            }
+        };
 
         const translations = {
             pl: {
                 pageTitle: "Gry Antka",
-                contactBtn: "Kontakt",
-                homeBtn: "Strona Główna",
-                langBtnText: "Języki 🌐",
-                themeBtnText: "Motywy 🎨",
-                themeGreen: "🟢 Zielony",
-                themeRed: "🔴 Czerwony",
-                themeBlue: "🔵 Niebieski",
+                homeBtn: "🏠 Strona Główna",
+                contactBtn: "📬 Kontakt",
                 subtitle: "śmieszne gry ze scratcha ktore zrobił antek",
                 footerNote: "to narazie tyle gier poczekaj chwile na troche gier",
                 contactSubtitle: "Masz pomysł na grę albo znalazłeś błąd?",
@@ -435,13 +473,8 @@
             },
             en: {
                 pageTitle: "Antek's Games",
-                contactBtn: "Contact",
-                homeBtn: "Home",
-                langBtnText: "Languages 🌐",
-                themeBtnText: "Themes 🎨",
-                themeGreen: "🟢 Green",
-                themeRed: "🔴 Red",
-                themeBlue: "🔵 Blue",
+                homeBtn: "🏠 Home",
+                contactBtn: "📬 Contact",
                 subtitle: "funny scratch games made by antek",
                 footerNote: "that's all the games for now, wait a moment for more",
                 contactSubtitle: "Got a game idea or found a bug?",
@@ -461,23 +494,29 @@
             if (isContactOpen) {
                 gamesView.classList.add('hidden');
                 contactView.classList.remove('hidden');
+                contactView.style.display = 'flex';
                 btn.textContent = t.homeBtn;
             } else {
                 gamesView.classList.remove('hidden');
                 contactView.classList.add('hidden');
+                contactView.style.display = 'none';
                 btn.textContent = t.contactBtn;
             }
         }
 
-        function toggleMenu(menuId) {
-            const menu = document.getElementById(menuId);
-            document.querySelectorAll('.dropdown-menu').forEach(m => {
-                if (m.id !== menuId) m.classList.remove('show');
-            });
-            menu.classList.toggle('show');
+        function updateThemeImages(themeName) {
+            const imgs = themeImages[themeName];
+            if (!imgs) return;
+
+            document.getElementById('imgMainLogo').src = imgs.mainLogo;
+            document.getElementById('imgContactMainLogo').src = imgs.mainLogo;
+            document.getElementById('imgMayoPl').src = imgs.mayoPl;
+            document.getElementById('imgMayoEn').src = imgs.mayoEn;
+            document.getElementById('imgCarSim').src = imgs.carSim;
         }
 
         function setTheme(themeName) {
+            currentTheme = themeName;
             const body = document.body;
             body.classList.remove('theme-red', 'theme-blue');
             
@@ -486,7 +525,8 @@
             } else if (themeName === 'blue') {
                 body.classList.add('theme-blue');
             }
-            document.getElementById('themeDropdown').classList.remove('show');
+
+            updateThemeImages(themeName);
         }
 
         function setLanguage(lang) {
@@ -494,12 +534,6 @@
             const t = translations[lang];
 
             document.getElementById('pageTitle').textContent = t.pageTitle;
-            document.getElementById('langBtn').textContent = t.langBtnText;
-            document.getElementById('themeBtn').textContent = t.themeBtnText;
-            
-            document.getElementById('optGreen').textContent = t.themeGreen;
-            document.getElementById('optRed').textContent = t.themeRed;
-            document.getElementById('optBlue').textContent = t.themeBlue;
             
             const contactBtn = document.getElementById('contactToggleBtn');
             contactBtn.textContent = isContactOpen ? t.homeBtn : t.contactBtn;
@@ -511,7 +545,6 @@
             document.getElementById('tContactText').textContent = t.contactText;
             document.getElementById('tBackBtn').textContent = t.backBtn;
 
-            // Przełączanie widoczności logo w zależności od języka
             const plElems = document.querySelectorAll('.lang-pl-elem');
             const enElems = document.querySelectorAll('.lang-en-elem');
 
@@ -521,14 +554,6 @@
             } else {
                 plElems.forEach(el => el.classList.remove('hidden'));
                 enElems.forEach(el => el.classList.add('hidden'));
-            }
-
-            document.getElementById('langDropdown').classList.remove('show');
-        }
-
-        window.onclick = function(event) {
-            if (!event.target.closest('.top-controls')) {
-                document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('show'));
             }
         }
     </script>
